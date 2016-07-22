@@ -1,0 +1,12 @@
+{
+  "name": "hapi-redis-connection",
+  "version": "1.0.0",
+  "devDependencies": {
+    "hapi": "^13.5.0",
+    "istanbul": "^0.4.4",
+    "tape": "^4.6.0"
+  },
+  "dependencies": {
+    "redis-connection": "^5.0.0"
+  }
+}
