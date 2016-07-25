@@ -54,7 +54,13 @@ of the server e.g:
 export REDISCLOUD_URL=redis://rediscloud:password@redis-server.com
 ```
 
+## Other Redis Providers?
 
+At *present* we are using Redis Cloud with our Hapi apps because
+they have a great service at an affordable price.
+
+If you are planning on using another provider e.g. AWS ElastiCache (Redis),
+***please let us know***! https://github.com/dwyl/redis-connection/issues
 
 ### Implementation Notes
 
