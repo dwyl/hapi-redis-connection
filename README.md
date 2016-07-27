@@ -56,7 +56,8 @@ export REDISCLOUD_URL=redis://rediscloud:password@redis-server.com
 
 ## Other Redis Providers?
 
-At *present* we are using Redis Cloud with our Hapi apps because
+At *present* we are using [Redis Cloud](https://github.com/dwyl/learn-redis#which-redis-as-a-service-heroku-addon)
+for our Hapi apps because
 they have a great service at an affordable price.
 
 If you are planning on using another provider e.g. AWS ElastiCache (Redis),

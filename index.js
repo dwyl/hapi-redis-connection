@@ -1,20 +1,15 @@
-var assert = require('assert');
-// if REDISCLOUD_URL Environment Variable is unset halt the server.start
-// assert(process.env.REDISCLOUD_URL, 'Please set DATABASE_URL Env Variable');
 var pkg = require('./package.json');
-var internals = {};
-var run_once = false;
+var run_once = false; // ensure we only attach the .on 'stop' event once
 var redisClient = require('redis-connection')(); // require & connect
-
 
 exports.register = function(server, options, next) {
 
   server.ext('onPreAuth', function (request, reply) {
-    // each connection created is shut down when the server stops (e.g tests)
+    // close the connection when the server stops (e.g in tests)
     if(!run_once) {
       run_once = true;
       server.on('stop', function () { // only one server.on('stop') listener
-        require('redis-connection').killall();
+        require('redis-connection').killall(); // close active redis connection
         server.log(['info', pkg.name], 'Redis Connection Closed');
       });
     }
