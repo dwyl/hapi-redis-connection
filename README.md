@@ -68,3 +68,5 @@ If you are planning on using another provider e.g. AWS ElastiCache (Redis),
 This package uses: [`redis-connection`](https://github.com/dwyl/redis-connection)
 which in turn exposes [`node_redis`](https://github.com/NodeRedis/node_redis)
 (*feature complete & high performance Redis client*)
+
+> Connecting to Redis Cloud is tested in: https://git.io/v6vTf

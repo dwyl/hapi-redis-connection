@@ -1,23 +1,4 @@
-config/
-lib-cov
-*.seed
-*.log
-*.csv
-*.dat
-*.out
-*.pid
-*.gz
-
-# see: https://github.com/dwyl/env2
-.env
-
-pids
-logs
-results
-
-npm-debug.log
 node_modules
+npm-debug.log
 .DS_Store
-.vagrant
-test/coverage.html
 coverage/
