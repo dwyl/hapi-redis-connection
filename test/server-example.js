@@ -17,9 +17,9 @@ server.route({
   method: '*',
   path: '/',
   handler: function(request, reply) {
-
+    // first set the value of "Everything" key to "Awesome!"
     request.redis.set('Everything', 'Awesome!', function(err, result) {
-      // console.log(err, result)
+      // get the value of "Everything" key and return it
       request.redis.get('Everything', function(err, result) {
         console.log('>> Everything is ' + result)
         return reply('Everything is ' + result); // https://youtu.be/StTqXEQ2l-Y
@@ -34,7 +34,7 @@ server.route({
   handler: function(request, reply) {
     request.redis.incr('counter', function(err, result) {
       console.log('>> Counter ' + result)
-      return reply(result); // https://youtu.be/StTqXEQ2l-Y
+      return reply(result);
     });
   }
 });
