@@ -52,7 +52,7 @@ server.route({
 
 > If you want more usage examples, ask! :wink:
 
-### *Required* Environment Variable
+### Environment Variable
 
 If you want to use a Redis server from a 3rd Party Provider, e.g: Redis Cloud you will need to export an environment variable with the URL
 of the server e.g:
@@ -60,6 +60,10 @@ of the server e.g:
 ```sh
 export REDISCLOUD_URL=redis://rediscloud:password@redis-server.com
 ```
+
+If you do not set a `REDISCLOUD_URL` the plugin will attempt to connect
+to redis on your localhost.
+
 
 ## Other Redis Providers?
 
