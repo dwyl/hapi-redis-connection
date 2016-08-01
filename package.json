@@ -4,7 +4,7 @@
   "devDependencies": {
     "decache": "^4.0.0",
     "env2": "^2.1.0",
-    "hapi": "^13.5.0",
+    "hapi": "^14.0.0",
     "istanbul": "^0.4.4",
     "tap-spec": "^4.1.1",
     "tape": "^4.6.0"

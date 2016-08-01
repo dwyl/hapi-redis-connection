@@ -1,10 +1,16 @@
 # hapi-redis-connection
 
+[![Build Status](https://travis-ci.org/dwyl/hapi-redis-connection.svg?branch=master)](https://travis-ci.org/dwyl/hapi-redis-connection)
+[![codecov](https://codecov.io/gh/dwyl/hapi-redis-connection/branch/master/graph/badge.svg)](https://codecov.io/gh/dwyl/hapi-redis-connection)
+[![Code Climate](https://codeclimate.com/github/dwyl/hapi-redis-connection/badges/gpa.svg)](https://codeclimate.com/github/dwyl/hapi-redis-connection)
+[![dependencies Status](https://david-dm.org/dwyl/hapi-redis-connection/status.svg)](https://david-dm.org/dwyl/hapi-redis-connection)
+[![devDependencies Status](https://david-dm.org/dwyl/hapi-redis-connection/dev-status.svg)](https://david-dm.org/dwyl/hapi-redis-connection?type=dev)
+
 ## *Why*?
 
 Redis is a *great* place to store data you need *fast* access to in your Hapi app. If you have many route handlers in separate files it can be *tedious* to `require()` (*or `import` if you prefer*) the `redis` module
 and establish a connection in each one ... so we created a tiny Plugin
-that gives you access to Redis in all your routes
+that gives you access to Redis in all your routes.
 
 
 ## *What*?
