@@ -6,6 +6,8 @@
 [![dependencies Status](https://david-dm.org/dwyl/hapi-redis-connection/status.svg)](https://david-dm.org/dwyl/hapi-redis-connection)
 [![devDependencies Status](https://david-dm.org/dwyl/hapi-redis-connection/dev-status.svg)](https://david-dm.org/dwyl/hapi-redis-connection?type=dev)
 
+![dilbert_in-memory](https://cloud.githubusercontent.com/assets/194400/17288192/05bed3d6-57d4-11e6-8870-19548218ca9e.jpg)
+
 ## *Why*?
 
 Redis is a *great* place to store data you need *fast* access to in your Hapi app. If you have many route handlers in separate files it can be *tedious* to `require()` (*or `import` if you prefer*) the `redis` module

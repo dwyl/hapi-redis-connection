@@ -1,8 +1,8 @@
 {
   "name": "hapi-redis-connection",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "devDependencies": {
-    "decache": "^4.0.0",
+    "decache": "^4.1.0",
     "env2": "^2.1.0",
     "hapi": "^14.0.0",
     "istanbul": "^0.4.4",
