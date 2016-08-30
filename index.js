@@ -5,8 +5,7 @@ var redisClient = require('redis-connection')(); // require & connect
 exports.register = function(server, options, next) {
 
   server.ext('onPreAuth', function (request, reply) {
-    // close the connection when the server stops (e.g in tests)
-    if(!run_once) {
+    if(!run_once) { // close the connection when the server stops (e.g in tests)
       run_once = true;
       server.on('stop', function () { // only one server.on('stop') listener
         require('redis-connection').killall(); // close active redis connection

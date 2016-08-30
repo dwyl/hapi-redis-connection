@@ -2,7 +2,9 @@
 
 ## *Why*?
 
-Redis is a great place to store data you need access to in your Hapi app.
+Redis is a *great* place to store data you need *fast* access to in your Hapi app. If you have many route handlers in separate files it can be *tedious* to `require()` (*or `import` if you prefer*) the `redis` module
+and establish a connection in each one ... so we created a tiny Plugin
+that gives you access to Redis in all your routes
 
 
 ## *What*?
@@ -16,6 +18,10 @@ anywhere in your Hapi server.
 
 Install the plugin/package from NPM:
 
+```sh
+npm install hapi-redis-connection --save
+```
+
 ### 2. *Intialise* the plugin in your Hapi Server
 
 ```js
@@ -28,6 +34,7 @@ server.register({ // register all your plugins
 });
 ```
 
+
 ### 3. *Use* `hapi-redis-connection` in your Route Handler
 
 ```js
@@ -35,15 +42,15 @@ server.route({
   method: 'GET',
   path: '/',
   handler: function(request, reply) {
-    var email = 'test@test.net';
-    var select = escape('SELECT * FROM people WHERE (email = %L)', email);
-    request.pg.client.query(select, function(err, result) {
+    request.redis.get('homepage', function(err, result) {
       console.log(err, result);
-      return reply(result.rows[0]);
-    })
+      return reply(result);
+    });
   }
 });
 ```
+
+> If you want more usage examples, ask! :wink:
 
 ### *Required* Environment Variable
 
