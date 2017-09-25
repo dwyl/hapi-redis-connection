@@ -12,7 +12,7 @@ exports.register = function(server, options, next) {
         server.log(['info', pkg.name], 'Redis Connection Closed');
       });
     }
-    request.redis = redisClient; // assign once
+    request.redis = options.redisClient || redisClient; // assign once
     reply.continue()
   });
   next();
